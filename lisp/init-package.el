@@ -65,13 +65,13 @@
 ;; 设置插件默认行为
 
 ;; (icomplete-mode 1)
-
+(vertico-mode t)
 (keycast-mode t)
 (marginalia-mode t)
 
 (setq completion-styles '(orderless))
 
-(global-set-key (kbd "C-'") 'embark-act)
+(global-set-key (kbd "C-;") 'embark-act)
 (setq prefix-help-command 'embark-prefix-help-command)
 
 (global-set-key (kbd "C-s") 'consult-line)

@@ -3,7 +3,8 @@
 ;;;;;;;;;;;;
 
 (require 'cmuscheme)
-(setq scheme-program-name "scheme")         ;; 如果用 Petite 就改成 "petite"
+;; (setq scheme-program-name "scheme")
+(setq scheme-program-name "chez")         ;; 如果用 Petite 就改成 "petite"
 
 ;; bypass the interactive question and start the default interpreter
 (defun scheme-proc ()
@@ -13,7 +14,7 @@
                (comint-check-proc scheme-buffer))
     (save-window-excursion
       (run-scheme scheme-program-name)))
-  (or (scheme-get-process)
+n  (or (scheme-get-process)
       (error "No current process. See variable `scheme-buffer'")))
 
 (defun scheme-split-window ()
