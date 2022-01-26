@@ -9,9 +9,12 @@
 (when (file-exists-p custom-file)
   (load-file custom-file))
 
+(require 'awesome-pair)
 (require 'init-package)
 (require 'init-ui)
 (require 'init-editor)
 (require 'init-theme)
 (require 'init-keyboard)
 (require 'init-scheme)
+(require 'init-org)
+(require 'init-filemanage)

@@ -1,7 +1,6 @@
 ;; ***************************************
 ;; editor行为控制
 
-
 ;; 关闭emacs自动保存
 (setq make-backup-files nil)
 
@@ -10,7 +9,7 @@
 
 
 ;; 关闭启动帮助画面
-(setq inhibit-splash-screen 1)
+;; (setq inhibit-splash-screen 1)
 
 ;; 关闭缩进 
 ;; (electric-indent-mode -1)
@@ -21,7 +20,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
 
 ;; 选中删除
 (delete-selection-mode 1)
@@ -31,6 +30,13 @@
 
 ;; 括号自动匹配
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+;; when inside paren
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
 
 ;; 高亮当前行
 (global-hl-line-mode 1)
@@ -56,6 +62,10 @@
   (interactive)
   (find-file "~/.emacs.d/lisp/init-editor.el"))
 
+(defun open-init-package-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-package.el"))
+
 ;; 开启全局company补全
 ;; (global-company-mode 1)
 (add-hook 'after-init-hook 'global-company-mode)
@@ -68,7 +78,7 @@
 					    ("inc" "include <stdio.h>")
 					    ))
 
-;; hippie补全
+;; hippie补全 emacs build-in scan symbols in current file
 (setq hippie-expand-try-function-list '(try-expand-debbrev
 					try-expand-debbrev-all-buffers
 					try-expand-debbrev-from-kill
