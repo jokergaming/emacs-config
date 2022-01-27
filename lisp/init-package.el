@@ -84,7 +84,7 @@
 
 (setq completion-styles '(orderless))
 
-(global-set-key (kbd "M-;") 'embark-act)
+(global-set-key (kbd "C-;") 'embark-act)
 (setq prefix-help-command 'embark-prefix-help-command)
 
 (global-set-key (kbd "C-s") 'consult-line)

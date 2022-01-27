@@ -6,8 +6,10 @@
 
 ;; 设置图形界面进行设置文件的保存位置
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
 (when (file-exists-p custom-file)
   (load-file custom-file))
+
 
 (require 'awesome-pair)
 (require 'init-package)
@@ -15,6 +17,6 @@
 (require 'init-editor)
 (require 'init-theme)
 (require 'init-keyboard)
-(require 'init-scheme)
 (require 'init-org)
 (require 'init-filemanage)
+(require 'init-scheme)
