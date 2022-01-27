@@ -14,7 +14,7 @@
                (comint-check-proc scheme-buffer))
     (save-window-excursion
       (run-scheme scheme-program-name)))
-n  (or (scheme-get-process)
+  (or (scheme-get-process)
       (error "No current process. See variable `scheme-buffer'")))
 
 (defun scheme-split-window ()
