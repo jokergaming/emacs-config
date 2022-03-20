@@ -32,6 +32,9 @@
 		;; js2-mode
 		;; markdown-mode
 		paredit
+                haskell-mode
+                lsp-mode
+		lsp-haskell
 		;; --- Minor Mode ---
 		;; nodejs-repl
 		;; exec-path-from-shell ;; 苹果系统修复查找可执行文件

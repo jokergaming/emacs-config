@@ -20,3 +20,4 @@
 (require 'init-org)
 (require 'init-filemanage)
 (require 'init-scheme)
+(require 'init-haskell)

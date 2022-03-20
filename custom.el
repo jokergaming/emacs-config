@@ -11,7 +11,7 @@
  '(company-minimum-prefix-length 1)
  '(custom-enabled-themes '(dracula))
  '(custom-safe-themes
-   '("22f080367d0b7da6012d01a8cd672289b1debfb55a76ecdb08491181dcb29626" default))
+   '("1436985fac77baf06193993d88fa7d6b358ad7d600c1e52d12e64a2f07f07176" "22f080367d0b7da6012d01a8cd672289b1debfb55a76ecdb08491181dcb29626" default))
  '(package-selected-packages
    '(consult embark marginalia keycast orderless vertico dracula-theme company)))
 (custom-set-faces

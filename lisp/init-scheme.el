@@ -4,7 +4,7 @@
 
 (require 'cmuscheme)
 ;; (setq scheme-program-name "scheme")
-(setq scheme-program-name "chez")         ;; 如果用 Petite 就改成 "petite"
+(setq scheme-program-name "chezscheme")         ;; 如果用 Petite 就改成 "petite"
 
 ;; bypass the interactive question and start the default interpreter
 (defun scheme-proc ()
